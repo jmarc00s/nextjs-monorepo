@@ -1,16 +1,18 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+
+import { Layout } from '@nextjs-monorepo/ui';
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to home-app!</title>
+        <title>Welcome to notes-app!</title>
       </Head>
-      <main className="app">
+      <Layout appTitle="Notes-app">
         <Component {...pageProps} />
-      </main>
+      </Layout>
     </>
   );
 }

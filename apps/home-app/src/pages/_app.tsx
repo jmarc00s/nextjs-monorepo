@@ -1,3 +1,4 @@
+import { Layout } from '@nextjs-monorepo/ui';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
@@ -6,11 +7,11 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to notes-app!</title>
+        <title>Welcome to home-app!</title>
       </Head>
-      <main className="app">
+      <Layout appTitle="Home-app">
         <Component {...pageProps} />
-      </main>
+      </Layout>
     </>
   );
 }
